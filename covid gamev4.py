@@ -21,6 +21,8 @@ clock = pygame.time.Clock()
 # 3 - Load images
 playerImg = pygame.image.load("/Users/bharatiagarwal/Downloads/main character (1).png")
 coronaImg = pygame.image.load("/Users/bharatiagarwal/Downloads/Coronavirus (1).png")
+secondcoronaImg = pygame.image.load("/Users/bharatiagarwal/Downloads/Second Coronavirus .png")
+rightPlayer = pygame.image.load("/Users/bharatiagarwal/Downloads/Right Side Character.png")
 
 # 4 - keep looping through
 
@@ -29,6 +31,12 @@ def player(x,y):
 
 def coronavirus(x,y):
     gameDisplay.blit(coronaImg, (x,y))
+
+def secondcoronavirus(x,y):
+    gameDisplay.blit(secondcoronaImg, (x,y))
+
+def rightplayer(x,y):
+    gameDisplay.blit(rightPlayer, (x,y))
 
 def text_objects(text, font):
     textSurface = font.render(text, True, black)
@@ -58,6 +66,10 @@ def game_loop():
     
     coronavirus_startx = random.randrange(0, display_width)
     coronavirus_starty = -600
+    secondcoronavirus_startx = random.randrange(0, display_width)
+    secondcoronavirus_starty = 1200
+    rightplayer_startx  = 1200
+    rightplayer_starty = random.randrange(0, display_height)
     coronavirus_speed = 7
     gameExit = False
 
@@ -88,6 +100,10 @@ def game_loop():
         gameDisplay.fill(white)
         coronavirus(coronavirus_startx, coronavirus_starty)
         coronavirus_starty += coronavirus_speed
+        secondcoronavirus(secondcoronavirus_startx, secondcoronavirus_starty)
+        secondcoronavirus_starty -= coronavirus_speed
+        rightplayer(rightplayer_startx, rightplayer_starty)
+        rightplayer_startx -= coronavirus_speed
         player(x,y)
        
 
@@ -100,10 +116,34 @@ def game_loop():
         if coronavirus_starty  > display_height:
                 coronavirus_starty = 0 - coronavirus_height
                 coronavirus_startx = random.randrange(0, display_width)
-        if y <= coronavirus_starty + coronavirus_height - 50 and y>= coronavirus_starty - coronavirus_height - 60 or y - player_height <= coronavirus_starty + coronavirus_height - 60 and y - player_height >= coronavirus_starty -coronavirus_height - 60:
+
+        if rightplayer_startx < 0:
+                rightplayer_starty = random.randrange(0, display_width)
+                rightplayer_startx = 600 + coronavirus_height
+
+        if secondcoronavirus_starty  < 0:
+                secondcoronavirus_starty = 600 + coronavirus_height
+                secondcoronavirus_startx = random.randrange(0, display_width)
+
+                
+        if y <= coronavirus_starty + coronavirus_height - 50 and y>= coronavirus_starty - coronavirus_height - 60:
             #('y crossover')
 
             if x >= coronavirus_startx and x<= coronavirus_startx + coronavirus_height - 40 or x + player_width >= coronavirus_startx  and x + player_width <= coronavirus_startx+ coronavirus_height - 40:
+               # print('x crossover')
+                crash()
+                
+        if y <= secondcoronavirus_starty + coronavirus_height - 50 and y>= secondcoronavirus_starty - coronavirus_height - 60:
+            #('y crossover')
+
+            if x >= secondcoronavirus_startx and x<= secondcoronavirus_startx + coronavirus_height - 40 or x + player_width >= secondcoronavirus_startx  and x + player_width <= secondcoronavirus_startx+ coronavirus_height - 40:
+               # print('x crossover')
+                crash()
+
+        if y <= rightplayer_starty + coronavirus_height - 50 and y>= rightplayer_starty - coronavirus_height - 60:
+            #('y crossover')
+
+            if x >= rightplayer_startx and x<= rightplayer_startx + coronavirus_height - 40 or x + player_width >= rightplayer_startx  and x + player_width <= rightplayer_startx+ coronavirus_height - 40:
                # print('x crossover')
                 crash()
                 
