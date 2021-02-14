@@ -11,7 +11,7 @@ Teaching children through their favorite activity can be an effective solution t
 
 ## **What It Does**
 
-Covid, Keep Your Distance is a progressive video game aimed at bringing fun and education to the player. 
+*Covid, Keep Your Distance* is a progressive video game aimed at bringing fun and education to the player. 
 
 The game is inspired by our daily lives, with a park as its setting and the player as a character taking a walk. 
 The player must avoid the Coronavirus falling from the sky or thrown up, and maintain a “six feet” distance from other characters. Within contact of a virus or a passerby, the game leads the player to a variety of Coronavirus related facts and guidelines.
