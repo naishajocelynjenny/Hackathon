@@ -22,9 +22,14 @@ After a few hours of discussing, we divided ourselves into 2 backend and 1 front
 Naisha and Jocelyn worked on creating the base of the game with Python, and Jenny created the sprites and designs of the game.
 
 ## **Challenges We Ran Into**
+8
+When we first started out, we had a hard time coming up with ideas. We wanted to make a program that could make a difference in some way, but we also needed a project where we could combine all of our experiences with coding. Eventually though, we were able to come up with *COVID, Keep Your Distance*. When building the program, one of our biggest challenges was getting the correct collision of the sprites. There was a confusion of what the x and y coordinates of the text should display after the collisions because the alignment was off center and the text was surpassing the screen dimension. Furthermore, it was our first time using Python, so there was a lot of experimenting and research throughout the day.
 
-Our biggest challenge was getting the correct collision of the sprites. There was a confusion of what the x and y coordinates of the text display after the collisions because the alignment was off center and text was surpassing the screen dimension. 
-Furthermore, it was actually our first time using Python, so there were a lot of experimenting and researching going on throughout. 
+## **Accomplishments That We’re Proud Of**
+We are proud of being able to make this game from scratch with no prior knowledge of Pygame, and to make an informational video game that can help children understand the severity of COVID 19 and how important it is to follow all safety guidelines. We hope that our game can be used to spread awareness of this virus.
+
+## **What we learned**
+Like mentioned previously, this was our first time creating a game with Python. Moreover, we were not experienced with PyGame, so when doing the project, we experienced a lot of setbacks and frequently had to look up things in order to continue going. But, we were able to persevere, work together, and have a final functional product.
 
 ## **What’s Next**
 For the second iteration of our informational game, we hope to make it more advanced. As the game is relatively simple, it would be better to add more dynamics, such as power ups and shields, so that the player can have a little more control of the character. 
