@@ -17,7 +17,7 @@ player_height = 73
 clock = pygame.time.Clock()
 
 # 3 - Load images
-playerImg = pygame.image.load("/Users/Jocelyn/Downloads/main character (1).png")
+playerImg = pygame.image.load("/Users/bharatiagarwal/Downloads/main character (1).png")
 
 # 4 - keep looping through
 
@@ -50,7 +50,7 @@ def game_loop():
     x_change = 0
     y_change = 0
     player_speed = 0
-    thing_startx = random.randrange(0, display_width)
+    ##thing_startx = random.randrange(0, display_width)
     thing_starty = -600
     thing_speed = 7
     thing_width = 100
